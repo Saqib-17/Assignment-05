@@ -1,4 +1,4 @@
-document.getElementById('donate-now-btn').addEventListener('click',function(event){
+document.getElementById('donate-now-btn1').addEventListener('click',function(event){
 const inputBalance = inputFinder('input-balance');
 if(isNaN(inputBalance) && inputBalance < 0){
     alert('Failed to Donate! Please Enter a Valid Amount');

@@ -19,27 +19,38 @@ function textFinder(id){
 
 //cashin funciton
 
-function cashIn(id){
-    document.getElementById('donate-now-btn').addEventListener('click',function(event){
+function cashIn(loc,button,input,cashInButton){
+   
+    document.getElementById(button).addEventListener('click',function(event){
         event.preventDefault();
+       
         
-            const inputBalance = inputFinder('input-balance');
+            const inputBalance = inputFinder(input);
             if(isNaN(inputBalance)){
                 alert('Failed to Donate! Please Enter a Valid Amount');
                 return;
             }
-        const cashInBalance = textFinder('cash-in-btn');
+        const cashInBalance = textFinder(cashInButton);
     
         const newBalance = inputBalance + cashInBalance;
-        document.getElementById('cash-in-btn').innerText = `${newBalance} BDT`;
+        document.getElementById(cashInButton).innerText = `${newBalance} BDT`;
     
        //call history
-       history(inputBalance);
+       history(inputBalance,loc);
     })
     
     
 }
-function history(id){
+
+
+
+
+
+
+
+
+
+function history(id,loc){
     //Donation history
     const div = document.createElement('div');
         div.classList.add('bg-secondary-color');
@@ -61,7 +72,7 @@ function history(id){
     
         // Create the donation history entry
         div.innerHTML = `
-        <p ><strong>${id} Taka is Donated for flood-2024 at Noakhali, Bangladesh</strong></p>
+        <p ><strong>${id} Taka is Donated for flood-2024 at ${loc}, Bangladesh</strong></p>
         <p >Date : ${formattedDate} (Bangladesh Standard Time)</p>
         `;
         div.style.border = '1px solid gray';
