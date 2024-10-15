@@ -13,5 +13,8 @@ document.getElementById('donation-button').addEventListener('click',function(eve
     showPage('donation-card-form');
    
 })
+document.getElementById('blog').addEventListener('click',function(){
+    window.location.href = '/blog.html';
+})
 
 

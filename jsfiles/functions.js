@@ -1,9 +1,11 @@
 function inputFinder(id){
    const inputNum =  document.getElementById(id).value;
-   if(inputNum <= 0){
-    return NaN;
-}
    const inputNumber = parseFloat(inputNum);
+
+    if(isNaN(inputNumber) || inputNumber < 0){
+        return NaN;
+    }
+
    return inputNumber;
 }
 
@@ -26,10 +28,15 @@ function cashIn(loc,button,input,cashInButton){
        
         
             const inputBalance = inputFinder(input);
-            if(isNaN(inputBalance)){
+            if(isNaN(inputBalance) || inputBalance < 0){
                 alert('Failed to Donate! Please Enter a Valid Amount');
                 return;
+                
             }
+            
+          
+    
+            
         const cashInBalance = textFinder(cashInButton);
     
         const newBalance = inputBalance + cashInBalance;
@@ -92,11 +99,14 @@ function history(id,loc){
 function cashOut(button,input){
 
     document.getElementById(button).addEventListener('click',function(event){
+        event.preventDefault();
         const inputBalance = inputFinder(input);
-        if(isNaN(inputBalance) && inputBalance < 0){
+        if(isNaN(inputBalance) || inputBalance < 0){
             alert('Failed to Donate! Please Enter a Valid Amount');
             return;
+            
         }
+       
         const cashOutBalance = textFinder('cash-out-btn');
         
         const newBalance = cashOutBalance - inputBalance;

@@ -36,11 +36,11 @@
 </head>
 <body class="lexend-font">
     <header>
-        <nav>
-            <div class="navbar bg-base-100 px-16 bg-secondary-color py-6 pb-10">
+        <nav class="">
+            <div class="navbar bg-base-100 px-16 bg-secondary-color py-6 ">
                 <div class="navbar-start">
                   
-                  <a class="btn btn-ghost text-xl font-semibold bg-primary-color lg:px-10">Blog</a>
+                  <a id="blog" class="btn btn-ghost text-xl font-semibold bg-primary-color lg:px-10">Blog</a>
                 </div>
                 <div class="navbar-center hidden lg:flex ">
                   <div class="menu menu-horizontal px-1 text-xl font-semibold">
@@ -80,7 +80,14 @@
             </p>
             <input type="text" name="" id="input-balance" placeholder="Write Donation Amount" class=" py-2 w-full pl-4">
             <br>
-            <button id="donate-now-btn1"  class="btn btn-ghost text-xl font-semibold bg-primary-color w-full">Donate Now</button>
+            <button id="donate-now-btn1" onclick="my_modal_5.showModal()"  class="btn btn-ghost text-xl font-semibold bg-primary-color w-full">Donate Now</button>
+
+
+  
+ 
+
+
+
             </div>
            
 
@@ -93,7 +100,7 @@
       <div class="hero py-10">
         <div class="hero-content flex-col lg:flex-row ">
           <img
-            src="assets/noakhali.png"
+            src="assets/feni.png"
             class="rounded-lg shadow-2xl" />
           <div>
             <div class="space-y-5">
@@ -120,7 +127,7 @@
       <div class="hero py-10">
         <div class="hero-content flex-col lg:flex-row ">
           <img
-            src="assets/noakhali.png"
+            src="assets/quota-protest.png"
             class="rounded-lg shadow-2xl" />
           <div>
             <div class="space-y-5">
@@ -149,12 +156,6 @@
 
 
 
-
-
-
-
-
-
       <!-- transaction history -->
       <div id="donation-history-form" class="hidden w-full text-xl mt-6  bg-secondary-color ">
         <div id="donation-container">
@@ -165,7 +166,9 @@
       
     </main>
     <footer>
+      <div class="navbar bg-base-100 px-16 bg-secondary-color py-16 ">
 
+      </div>
     </footer>
     
     <script src="jsfiles/functions.js"></script>
