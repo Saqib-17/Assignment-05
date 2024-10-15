@@ -72,7 +72,7 @@ function history(id,loc){
     
         // Create the donation history entry
         div.innerHTML = `
-        <p ><strong>${id} Taka is Donated for flood-2024 at ${loc}, Bangladesh</strong></p>
+        <p ><strong>${id} Taka is Donated for ${loc}, Bangladesh</strong></p>
         <p >Date : ${formattedDate} (Bangladesh Standard Time)</p>
         `;
         div.style.border = '1px solid gray';
@@ -85,4 +85,21 @@ function history(id,loc){
     
         // Append the donation history entry to the container
         document.getElementById('donation-container').appendChild(div);
+}
+
+
+//cash out function
+function cashOut(button,input){
+
+    document.getElementById(button).addEventListener('click',function(event){
+        const inputBalance = inputFinder(input);
+        if(isNaN(inputBalance) && inputBalance < 0){
+            alert('Failed to Donate! Please Enter a Valid Amount');
+            return;
+        }
+        const cashOutBalance = textFinder('cash-out-btn');
+        
+        const newBalance = cashOutBalance - inputBalance;
+        document.getElementById('cash-out-btn').innerText = `${newBalance} BDT`;
+        })
 }

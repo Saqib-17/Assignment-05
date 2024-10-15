@@ -10,7 +10,7 @@ const loc2 = document.getElementById('place-2').innerText ;
 cashIn(loc2,'donate-now-btn2','input-balance2','cash-in-btn2');
 
 //for quota movement
-const loc3 = document.getElementById('place-2').innerText ;
+const loc3 = document.getElementById('place-3').innerText ;
 cashIn(loc3,'donate-now-btn3','input-balance3','cash-in-btn3');
 
 
