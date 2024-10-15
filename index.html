@@ -57,11 +57,12 @@
     <main class="my-20 lg:px-36">
         <!-- action button -->
        <div class="flex justify-center space-x-4">
-        <button class="btn btn-lg text-xl font-semibold px-10">Donate Now</button>
-        <button class="btn btn-lg text-xl font-semibold px-10">History</button>
+        <button id="donation-button" class="btn btn-lg text-xl font-semibold px-10">Donate Now</button>
+        <button id="donation-history-btn" class="btn btn-lg text-xl font-semibold px-10">History</button>
        </div>
 
-       <!-- card-1 -->
+      <div id="donation-card-form" >
+         <!-- card-1 -->
        <div class="hero py-10">
         <div class="hero-content flex-col lg:flex-row ">
           <img
@@ -69,10 +70,10 @@
             class="rounded-lg shadow-2xl" />
           <div>
             <div class="space-y-5">
-                <img src="assets/coin.png" alt="">
-                <button id="cash-in-btn" class="btn text-xl">
-                    
-                    100 BDT</button>
+                
+                <button class="btn text-xl">
+                    <img src="assets/coin.png" alt="">
+                   <a id="cash-in-btn" href="">100 BDT</a></button>
                 <h1 class="text-2xl font-bold">Donate for Flood at Noakhali, Bangladesh</h1>
             <p class="py-2 text-base font-light text-dark-3">
                 The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.
@@ -88,15 +89,30 @@
         </div>
       </div>
 
+      </div>
+
+
+
+
+
+
+      <!-- transaction history -->
+      <div id="donation-history-form" class="hidden w-full text-xl mt-6  bg-secondary-color ">
+        <div id="donation-container">
+            
+        </div>
+   </div>
+
       
     </main>
     <footer>
 
     </footer>
     <script src="jsfiles/functions.js"></script>
-    <script src="jsfiles/index.js"></script>
+    <script src="jsfiles/form.js"></script>
     <script src="jsfiles/cashIn.js"></script>
     <script src="jsfiles/cashOut.js"></script>
+    <script src="jsfiles/features.js"></script>
     
 </body>
 </html>

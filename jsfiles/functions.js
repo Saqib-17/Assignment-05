@@ -1,5 +1,8 @@
 function inputFinder(id){
    const inputNum =  document.getElementById(id).value;
+   if(inputNum <= 0){
+    return NaN;
+}
    const inputNumber = parseFloat(inputNum);
    return inputNumber;
 }
