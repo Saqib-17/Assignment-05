@@ -22,10 +22,10 @@ function textFinder(id){
 //cashin funciton
 
 function cashIn(loc,button,input,cashInButton){
-   
+    
     document.getElementById(button).addEventListener('click',function(event){
         event.preventDefault();
-       
+        
         
             const inputBalance = inputFinder(input);
             if(isNaN(inputBalance) || inputBalance < 0){
@@ -33,17 +33,22 @@ function cashIn(loc,button,input,cashInButton){
                 return;
                 
             }
+            else
+            {
+                modalShow(button);
+                const cashInBalance = textFinder(cashInButton);
+    
+                const newBalance = inputBalance + cashInBalance;
+                document.getElementById(cashInButton).innerText = `${newBalance} BDT`;
             
+               //call history
+               history(inputBalance,loc);
+               
+            }
           
     
             
-        const cashInBalance = textFinder(cashInButton);
-    
-        const newBalance = inputBalance + cashInBalance;
-        document.getElementById(cashInButton).innerText = `${newBalance} BDT`;
-    
-       //call history
-       history(inputBalance,loc);
+       
     })
     
     
@@ -102,7 +107,6 @@ function cashOut(button,input){
         event.preventDefault();
         const inputBalance = inputFinder(input);
         if(isNaN(inputBalance) || inputBalance < 0){
-            alert('Failed to Donate! Please Enter a Valid Amount');
             return;
             
         }
@@ -112,4 +116,16 @@ function cashOut(button,input){
         const newBalance = cashOutBalance - inputBalance;
         document.getElementById('cash-out-btn').innerText = `${newBalance} BDT`;
         })
+}
+
+//modal
+function modalShow(id){
+        const button = document.getElementById(id);
+        const modal = document.getElementById('my_modal_1');
+    
+       
+            modal.showModal();
+        
+  
+    
 }
