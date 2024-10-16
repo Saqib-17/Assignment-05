@@ -35,8 +35,8 @@
 </style>
 </head>
 <body class="lexend-font">
-    <header>
-        <nav class="">
+    <header class="sticky top-0 z-10 ">
+        <nav id="navbar">
             <div class="navbar bg-base-100 px-16 bg-secondary-color py-6 ">
                 <div class="navbar-start">
                   
@@ -54,10 +54,10 @@
               </div>
         </nav>
     </header>
-    <main class="my-20 lg:px-36">
+    <main class="my-20 lg:px-36 relative">
         <!-- action button -->
-       <div class="flex justify-center space-x-4">
-        <button id="donation-button" class="btn btn-lg text-xl font-semibold px-10">Donate Now</button>
+       <div id="action-btn" class="flex justify-center space-x-4 sticky mx-auto w-full z-40 top-16">
+        <button id="donation-button" class="btn btn-lg text-xl font-semibold px-10 ">Donate Now</button>
         <button id="donation-history-btn" class="btn btn-lg text-xl font-semibold px-10">History</button>
        </div>
 
@@ -80,7 +80,7 @@
             </p>
             <input type="text" name="" id="input-balance" placeholder="Write Donation Amount" class=" py-2 w-full pl-4">
             <br>
-            <button id="donate-now-btn1" onclick="my_modal_5.showModal()"  class="btn btn-ghost text-xl font-semibold bg-primary-color w-full">Donate Now</button>
+            <button id="donate-now-btn1" class="btn btn-ghost text-xl font-semibold bg-primary-color w-full">Donate Now</button>
 
 
   
